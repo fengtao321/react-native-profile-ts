@@ -1,10 +1,11 @@
-import { observer } from "mobx-react-lite"
+import { Button, Icon, Screen, Text, TextField, TextFieldAccessoryProps } from "../components"
 import React, { FC, useEffect, useMemo, useRef, useState } from "react"
 import { TextInput, TextStyle, ViewStyle } from "react-native"
-import { Button, Icon, Screen, Text, TextField, TextFieldAccessoryProps } from "../components"
-import { useStores } from "../models"
-import { AppStackScreenProps } from "../navigators"
 import { colors, spacing } from "../theme"
+
+import { AppStackScreenProps } from "../navigators"
+import { observer } from "mobx-react-lite"
+import { useStores } from "../models"
 
 interface LoginScreenProps extends AppStackScreenProps<"Login"> {}
 
@@ -27,8 +28,8 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
   useEffect(() => {
     // Here is where you could fetch credientials from keychain or storage
     // and pre-fill the form fields.
-    setAuthEmail("ignite@infinite.red")
-    setAuthPassword("ign1teIsAwes0m3")
+    setAuthEmail("profile@cic.gc.ca")
+    setAuthPassword("Canada123.")
   }, [])
 
   const errors: typeof validationErrors = isSubmitted ? validationErrors : ({} as any)

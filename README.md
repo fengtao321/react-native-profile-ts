@@ -128,3 +128,8 @@ Read [Detox setup instructions](./detox/README.md).
 - [2017 aka Andross](https://github.com/infinitered/ignite-andross)
 - [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
 
+## Need  to run after npm install: 
+
+Read [fontFamily "WorkSans_300Light" is not a system font and has not been loaded through Font.loadAsync] (https://github.com/expo/google-fonts/issues/9)
+
+rm -rf ./node_modules/expo/node_modules/expo-font/

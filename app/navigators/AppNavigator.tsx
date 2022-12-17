@@ -8,21 +8,23 @@ import {
   DarkTheme,
   DefaultTheme,
   NavigationContainer,
-  NavigatorScreenParams, // @demo remove-current-line
+  NavigatorScreenParams
 } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { StackScreenProps } from "@react-navigation/stack"
-import { observer } from "mobx-react-lite"
-import React from "react"
-import { useColorScheme } from "react-native"
-import Config from "../config"
-import { useStores } from "../models" // @demo remove-current-line
-import {
-  LoginScreen, // @demo remove-current-line
-  WelcomeScreen,
-} from "../screens"
 import { DemoNavigator, DemoTabParamList } from "./DemoNavigator" // @demo remove-current-line
+import {
+  LoginScreen,
+  ProfileScreen,
+  WelcomeScreen
+} from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
+
+import Config from "../config"
+import React from "react"
+import { StackScreenProps } from "@react-navigation/stack"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { observer } from "mobx-react-lite"
+import { useColorScheme } from "react-native"
+import { useStores } from "../models" // @demo remove-current-line
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -40,6 +42,7 @@ import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 export type AppStackParamList = {
   Welcome: undefined
   Login: undefined // @demo remove-current-line
+  Profile:undefined
   Demo: NavigatorScreenParams<DemoTabParamList> // @demo remove-current-line
   // 🔥 Your screens go here
 }
@@ -68,15 +71,18 @@ const AppStack = observer(function AppStack() {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={isAuthenticated ? "Welcome" : "Login"} // @demo remove-current-line
+      initialRouteName={isAuthenticated ? "Profile" : "Login"} // @demo remove-current-line
     >
       {/* @demo remove-block-start */}
       {isAuthenticated ? (
         <>
+          {/* Profile Screen - prototype */}
+          <Stack.Screen name="Profile" component={ProfileScreen} />
           {/* @demo remove-block-end */}
           <Stack.Screen name="Welcome" component={WelcomeScreen} />
           {/* @demo remove-block-start */}
           <Stack.Screen name="Demo" component={DemoNavigator} />
+
         </>
       ) : (
         <>

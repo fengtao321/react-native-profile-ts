@@ -1,6 +1,7 @@
-import { createContext, useContext, useEffect, useState } from "react"
-import { setReactotronRootStore } from "../../services/reactotron"
 import { RootStore, RootStoreModel } from "../RootStore"
+import { createContext, useContext, useEffect, useState } from "react"
+
+import { setReactotronRootStore } from "../../services/reactotron"
 import { setupRootStore } from "./setupRootStore"
 
 /**

@@ -1,10 +1,10 @@
 {
-  "name": "MyTSProject",
-  "displayName": "MyTSProject",
+  "name": "ReactNativeProfile",
+  "displayName": "React Native Profile",
   "expo": {
-    "name": "MyTSProject",
-    "slug": "MyTSProject",
-    "scheme": "mytsproject",
+    "name": "React Native Profile",
+    "slug": "ReactNativeProfile",
+    "scheme": "ReactNativeProfile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon-all.png",
@@ -20,7 +20,7 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
-      "package": "com.mytsproject",
+      "package": "com.profile",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
         "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
@@ -34,7 +34,7 @@
     "ios": {
       "icon": "./assets/images/app-icon-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.mytsproject",
+      "bundleIdentifier": "com.profile",
       "splash": {
         "image": "./assets/images/splash-logo-ios-mobile.png",
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
