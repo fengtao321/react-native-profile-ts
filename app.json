@@ -1,10 +1,10 @@
 {
-  "name": "profile",
-  "displayName": "profile",
+  "name": "MyTSProject",
+  "displayName": "MyTSProject",
   "expo": {
-    "name": "profile",
-    "slug": "profile",
-    "scheme": "profile",
+    "name": "MyTSProject",
+    "slug": "MyTSProject",
+    "scheme": "mytsproject",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon-all.png",
@@ -20,7 +20,7 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
-      "package": "com.profile",
+      "package": "com.mytsproject",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
         "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
@@ -34,7 +34,7 @@
     "ios": {
       "icon": "./assets/images/app-icon-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.profile",
+      "bundleIdentifier": "com.mytsproject",
       "splash": {
         "image": "./assets/images/splash-logo-ios-mobile.png",
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
