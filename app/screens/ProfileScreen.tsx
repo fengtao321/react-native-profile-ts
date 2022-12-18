@@ -68,80 +68,80 @@ export const ProfileScreen: FC<ProfileScreenProps> = observer(function ProfileSc
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
   return (
     <View style={$container}>
-    <View style={$topContainer}>
+      <View style={$topContainer}>
 
-      <Text
-        testID="welcome-heading"
-        style={$welcomeHeading}
-        tx="welcomeScreen.readyForLaunch"
-        preset="heading"
-      />
-      <Text tx="welcomeScreen.exciting" preset="subheading" />
+        <Text
+          testID="welcome-heading"
+          style={$welcomeHeading}
+          tx="welcomeScreen.readyForLaunch"
+          preset="heading"
+        />
+        <Text tx="welcomeScreen.exciting" preset="subheading" />
 
-    </View>
+      </View>
 
-    <View style={[$bottomContainer, $bottomContainerInsets]}>
-      <TextField
-        value={firstName}
-        onChangeText={setFirstName}
-        containerStyle={$textField}
-        keyboardType="default"
-        autoCapitalize="none"
-        autoComplete="name-given"
-        autoCorrect={false}
-        labelTx="profileScreen.firstNameFieldLabel"
-        placeholderTx="profileScreen.firstNameFieldPlaceholder"
-      />
-      <TextField
-        value={lastName}
-        onChangeText={setLastName}
-        containerStyle={$textField}
-        autoCapitalize="none"
-        keyboardType="default"
-        autoComplete="name-family"
-        autoCorrect={false}
-        labelTx="profileScreen.lastNameFieldLabel"
-        placeholderTx="profileScreen.lastNameFieldPlaceholder"
-        helper={errors?.lastName}
-        status={errors?.lastName ? "error" : undefined}
-      />
-      <TextField
-        value={email}
-        onChangeText={setEmail}
-        containerStyle={$textField}
-        autoCapitalize="none"
-        autoComplete="email"
-        autoCorrect={false}
-        keyboardType="email-address"
-        labelTx="profileScreen.emailFieldLabel"
-        placeholderTx="profileScreen.emailFieldPlaceholder"
-        helper={errors?.email}
-        status={errors?.email ? "error" : undefined}
-      />
-      <TextField
-        value={phoneNumber}
-        onChangeText={setPhoneNumber}
-        containerStyle={$textField}
-        autoCapitalize="none"
-        autoComplete="tel"
-        autoCorrect={false}
-        keyboardType="phone-pad"
-        labelTx="profileScreen.phoneNumberFieldLabel"
-        placeholderTx="profileScreen.phoneNumberFieldPlaceholder"
-        helper={errors?.phoneNumber}
-        status={errors?.phoneNumber ? "error" : undefined}
-      />
+      <View style={[$bottomContainer, $bottomContainerInsets]}>
+        <TextField
+          value={firstName}
+          onChangeText={setFirstName}
+          containerStyle={$textField}
+          keyboardType="default"
+          autoCapitalize="none"
+          autoComplete="name-given"
+          autoCorrect={false}
+          labelTx="profileScreen.firstNameFieldLabel"
+          placeholderTx="profileScreen.firstNameFieldPlaceholder"
+        />
+        <TextField
+          value={lastName}
+          onChangeText={setLastName}
+          containerStyle={$textField}
+          autoCapitalize="none"
+          keyboardType="default"
+          autoComplete="name-family"
+          autoCorrect={false}
+          labelTx="profileScreen.lastNameFieldLabel"
+          placeholderTx="profileScreen.lastNameFieldPlaceholder"
+          helper={errors?.lastName}
+          status={errors?.lastName ? "error" : undefined}
+        />
+        <TextField
+          value={email}
+          onChangeText={setEmail}
+          containerStyle={$textField}
+          autoCapitalize="none"
+          autoComplete="email"
+          autoCorrect={false}
+          keyboardType="email-address"
+          labelTx="profileScreen.emailFieldLabel"
+          placeholderTx="profileScreen.emailFieldPlaceholder"
+          helper={errors?.email}
+          status={errors?.email ? "error" : undefined}
+        />
+        <TextField
+          value={phoneNumber}
+          onChangeText={setPhoneNumber}
+          containerStyle={$textField}
+          autoCapitalize="none"
+          autoComplete="tel"
+          autoCorrect={false}
+          keyboardType="phone-pad"
+          labelTx="profileScreen.phoneNumberFieldLabel"
+          placeholderTx="profileScreen.phoneNumberFieldPlaceholder"
+          helper={errors?.phoneNumber}
+          status={errors?.phoneNumber ? "error" : undefined}
+        />
 
 
-      {/* @demo remove-block-start */}
-      <Button
-        testID="next-screen-button"
-        preset="reversed"
-        tx="welcomeScreen.letsGo"
-        onPress={submitProfile}
-      />
-      {/* @demo remove-block-end */}
-    </View>
+        {/* @demo remove-block-start */}
+        <Button
+          testID="next-screen-button"
+          preset="reversed"
+          tx="welcomeScreen.letsGo"
+          onPress={submitProfile}
+        />
+        {/* @demo remove-block-end */}
+      </View>
   </View>
   )
 })
@@ -149,39 +149,30 @@ export const ProfileScreen: FC<ProfileScreenProps> = observer(function ProfileSc
 const $container: ViewStyle = {
   flex: 1,
   backgroundColor: colors.background,
+  alignItems: "center",
 }
 
 const $topContainer: ViewStyle = {
   flexShrink: 1,
   flexGrow: 1,
-  flexBasis: "57%",
+  flexBasis: "30%",
   justifyContent: "center",
   paddingHorizontal: spacing.large,
+  width: "100%",
+  maxWidth: 1000,
 }
 
 const $bottomContainer: ViewStyle = {
   flexShrink: 1,
   flexGrow: 0,
-  flexBasis: "43%",
+  flexBasis: "70%",
   backgroundColor: colors.palette.neutral100,
   borderTopLeftRadius: 16,
   borderTopRightRadius: 16,
   paddingHorizontal: spacing.large,
   justifyContent: "space-around",
-}
-const $welcomeLogo: ImageStyle = {
-  height: 88,
   width: "100%",
-  marginBottom: spacing.huge,
-}
-
-const $welcomeFace: ImageStyle = {
-  height: 169,
-  width: 269,
-  position: "absolute",
-  bottom: -47,
-  right: -80,
-  transform: [{ scaleX: isRTL ? -1 : 1 }],
+  maxWidth: 1000,
 }
 
 const $welcomeHeading: TextStyle = {
