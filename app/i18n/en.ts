@@ -120,6 +120,19 @@ const en = {
     },
   },
   // @demo remove-block-end
+  profileScreen: {
+    signIn: "Sign In",
+    enterDetails:
+      "Enter your details below to unlock top secret info. You'll never guess what we've got waiting. Or maybe you will; it's not rocket science here.",
+    firstNameFieldLabel: "Given Name",
+    firstNameFieldPlaceholder:"Enter your first name",
+    lastNameFieldLabel: "Family Name",
+    lastNameFieldPlaceholder:"Enter your last name",
+    emailFieldLabel: "Email",
+    emailFieldPlaceholder: "Enter your email address",
+    phoneNumberFieldLabel:"Phone number",
+    phoneNumberFieldPlaceholder:"Enter your phone number",
+  },
 }
 
 export default en
